@@ -1,13 +1,10 @@
-<div style="text-align:center; margin-top: 100px; ">
-    <mat-card style="margin-top:10px; width: 50%;">
-            <mat-card-content>
-                Example Card Content
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button color="warn" (click)="onClick()">
-                    <mat-icon>file_upload</mat-icon>
-                    Click Me
-                </button>
-            </mat-card-actions>
-    </mat-card>
-    <input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" /></div>
+<div class="home-container">
+    <mat-grid-list cols="2" rowHeight="3:1">
+        <mat-grid-tile class="home-tile"><img routerLink="/" src="assets/1.png" class="slide-rotate-ver-left" /></mat-grid-tile>
+        <mat-grid-tile class="home-tile"><img routerLink="/" src="assets/2.png" class="slide-rotate-ver-left" /></mat-grid-tile>
+        <mat-grid-tile class="home-tile"><img routerLink="/" src="assets/3.png" class="slide-rotate-ver-left" /></mat-grid-tile>
+        <mat-grid-tile class="home-tile"><img routerLink="/" src="assets/4.png" class="slide-rotate-ver-left" /></mat-grid-tile>
+        <mat-grid-tile class="home-tile"><img routerLink="/" src="assets/5.png" class="slide-rotate-ver-left" /></mat-grid-tile>
+        <mat-grid-tile class="home-tile"><img routerLink="/" src="assets/6.png" class="slide-rotate-ver-left" /></mat-grid-tile>
+    </mat-grid-list>
+</div>

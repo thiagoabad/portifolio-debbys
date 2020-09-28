@@ -1,14 +1,14 @@
 <mat-sidenav-container class="main">
   <mat-sidenav class="menu" mode="side" opened>
-    <mat-toolbar>Debbys Melo</mat-toolbar>
-    <mat-nav-list class="list-container" layout-align="center center" >
-        <a mat-list-item href="#" class="menu-link">Home</a>
-        <a mat-list-item href="#">Creation</a>
-        <a mat-list-item href="#">Branding</a>
-        <a mat-list-item href="#">Editorial</a>
-        <a mat-list-item href="#">Other</a>
-        <a mat-list-item href="#">About Me</a>
-    </mat-nav-list>
+    <div class="menu-logo rotate-center"><p class="rotate-center">Debbys Melo</p></div>
+    <div class="list-container">
+        <button mat-flat-button class="menu-item">Home</button>
+        <button mat-flat-button class="menu-item">Creation</button>
+        <button mat-flat-button class="menu-item">Branding</button>
+        <button mat-flat-button class="menu-item">Editorial</button>
+        <button mat-flat-button class="menu-item">Other</button>
+        <button mat-flat-button class="menu-item">About Me</button>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content class="content">
     <router-outlet></router-outlet>

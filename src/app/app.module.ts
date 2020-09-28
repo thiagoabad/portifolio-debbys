@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from 'src/app.routing.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatProgressBarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
