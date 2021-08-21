@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&display=swap');
 
+* {
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
 .App {
   display: flex;
   margin: 0;
@@ -24,11 +30,26 @@
 
 .MainArea{
   /* background: url(./components/MainArea/CapaHappyDog.png) no-repeat center / cover; */
-  width: 45vw;
+  width: 55vw;
   height: 100vh;
   margin-left: -100%;
   background-color: rgb(14 14 14 / 75%);
   
+}
+
+.more{
+  margin-left: 95vw;
+  margin-top: -57vh;
+  height: 135px;
+  width: 20px;
+  background-color: black;
+  color: #ffe2e2;
+  border-width: 5px;
+  border: #52412b solid 3px;
+  padding: 3px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
 }
 
 .LeftMenu p{
@@ -93,17 +114,6 @@
   margin: 5px;
 }
 
-.more{
-  position: fixed;
-  margin-left: 89vw;
-  margin-top: 50vh;
-  background-color: black;
-  color: #ffe2e2;
-  border-width: 5px;
-  border: #52412b solid 3px;
-  padding: 3px;
-}
-
 .detailsContentOpened{
   width: 100%;
   height: 100%;
@@ -130,3 +140,10 @@
       margin-top: -100px;
   }
 } */
+
+.mockup{
+  height: 40vh;
+  margin-top: -71vh;
+  margin-bottom: 31vh;
+  margin-left: 35vw;
+}
