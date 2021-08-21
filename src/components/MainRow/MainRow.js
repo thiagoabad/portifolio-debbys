@@ -28,6 +28,7 @@ function MainRow(props) {
         handleClick={() => handleClick()} 
         id={props.id} 
         idToKeep={props.idToKeep}
+        data={props.data}
       />
       { props.mainAreaVisibility && <MainArea animate={active}/> }
     </div>

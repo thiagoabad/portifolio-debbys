@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import { Link } from 'react-scroll'
+import { Link } from 'react-scroll';
+import { Range } from '../../helpers/utils';
 
 function MiniMenu(props) {
-    const screens = [1, 2, 3];
-
     const [active, setActive] = useState(1);
 
     function handleClick(screen){
@@ -15,7 +14,7 @@ function MiniMenu(props) {
         {
         props.visible ?
         <div className="MiniMenu">
-          {screens.map(screen => 
+          {Range(1, (props.size +1)).map(screen => 
             <Link 
               key={screen} 
               className={screen === active ? "circleactive" : "circle"} 

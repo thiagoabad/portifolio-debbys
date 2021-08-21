@@ -46,11 +46,11 @@ function LeftMenu(props) {
         <motion.div animate={controls2} className="floatScreen">
           <motion.div className="LeftMenu">
             <motion.div animate={controls}>
-              <p id="title" className="leftMenuTitle">Job</p>
-              <h2>Amigos de patas</h2>
-              <h3>Petshop</h3>
-              <p>Identity, RL Marketing</p>
-              <p>2010</p>
+              <p id="title" className="leftMenuTitle">{props.data.type}</p>
+              <h2>{props.data.brand}</h2>
+              <h3>{props.data.industry}</h3>
+              <p>{props.data.tasks}</p>
+              <p>{props.data.year}</p>
               <p>{props.id}</p>
             </motion.div>
           </motion.div>

@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import MainRow from '../MainRow/MainRow';
-import MiniMenu from '../MiniMenu/MiniMenu'
-import { Element } from 'react-scroll'
+import MiniMenu from '../MiniMenu/MiniMenu';
+import { Element } from 'react-scroll';
+import data from '../../data';
 
 function Home() {
     const [idToKeep, setIdToKeep] = useState(0);
@@ -18,38 +19,23 @@ function Home() {
     }
   
     return (<>
-      <MiniMenu visible={miniMenuVisibility}/>
-      { (idToKeep === 0 || idToKeep === 1) && 
-      <Element name="row1" className="element" >
-        <MainRow 
-          id={1} 
-          hideMiniMenu={() => hideMiniMenu()}
-          hideAllOthers={(idToKeep) => hideAllOthers(idToKeep)}
-          idToKeep={idToKeep}
-          mainAreaVisibility={mainAreaVisibility}
-        />
-      </Element>
-      }
-      { (idToKeep === 0 || idToKeep === 2) && 
-      <Element name="row2" className="element" >
-        <MainRow 
-          id={2} 
-          hideMiniMenu={() => hideMiniMenu()}
-          hideAllOthers={(idToKeep) => hideAllOthers(idToKeep)}
-          idToKeep={idToKeep}
-        />
-      </Element>
-      }
-      { (idToKeep === 0 || idToKeep === 3) && 
-      <Element name="row3" className="element" >
-        <MainRow 
-          id={3} 
-          hideMiniMenu={() => hideMiniMenu()}
-          hideAllOthers={(idToKeep) => hideAllOthers(idToKeep)}
-          idToKeep={idToKeep}
-        />
-      </Element>
-      }
+        <MiniMenu visible={miniMenuVisibility} size={data.length}/>
+        {data.map(el => {
+            if (idToKeep === 0 || idToKeep === el.id) {
+                return  <Element key={el.id} name={"row"+el.id} className="element" >
+                            <MainRow 
+                            id={el.id} 
+                            data={el}
+                            hideMiniMenu={() => hideMiniMenu()}
+                            hideAllOthers={(idToKeep) => hideAllOthers(idToKeep)}
+                            idToKeep={idToKeep}
+                            mainAreaVisibility={mainAreaVisibility}
+                            />
+                        </Element>
+            } else {
+                return null
+            }
+        })}
     </>)
   }
 
