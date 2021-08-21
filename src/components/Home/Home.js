@@ -40,6 +40,16 @@ function Home() {
         />
       </Element>
       }
+      { (idToKeep === 0 || idToKeep === 3) && 
+      <Element name="row3" className="element" >
+        <MainRow 
+          id={3} 
+          hideMiniMenu={() => hideMiniMenu()}
+          hideAllOthers={(idToKeep) => hideAllOthers(idToKeep)}
+          idToKeep={idToKeep}
+        />
+      </Element>
+      }
     </>)
   }
 

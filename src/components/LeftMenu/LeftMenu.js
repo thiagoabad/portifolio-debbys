@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion"
 import React, {useLayoutEffect , useRef } from "react";
 import Details from '../Details/Details';
 import img from "./HappyDogMockup.png";
+import { ReactComponent as Plus } from './plus.svg';
 
 function LeftMenu(props) {
   const controls = useAnimation();
@@ -17,12 +18,12 @@ function LeftMenu(props) {
     }
     props.hideMiniMenu();
     controls3.start({
-      x: props.animate ? '10%' : 0,
-      transition: { duration: 1.5 },
+      x: props.animate ? '150%' : 0,
+      transition: { duration: 1.4 },
     })
     controls.start({
       x: props.animate ? '-100%' : 0,
-      transition: { duration: 2 },
+      transition: { duration: 1.4 },
     }).then(() => {
       controls2.start({
         y: props.animate ? '-100%' : 0,
@@ -42,24 +43,31 @@ function LeftMenu(props) {
     <div className="detailsContentOpened">
       {
         props.idToKeep === 0 && 
-        <>
-        <motion.div animate={controls2} className="LeftMenu">
-          <motion.div animate={controls}>
-            <p id="title" className="leftMenuTitle">Job</p>
-            <h2>Amigos de patas</h2>
-            <h3>Petshop</h3>
-            <p>Identity, RL Marketing</p>
-            <p>2010</p>
-            <p>{props.id}</p>
+        <motion.div animate={controls2} className="floatScreen">
+          <motion.div className="LeftMenu">
+            <motion.div animate={controls}>
+              <p id="title" className="leftMenuTitle">Job</p>
+              <h2>Amigos de patas</h2>
+              <h3>Petshop</h3>
+              <p>Identity, RL Marketing</p>
+              <p>2010</p>
+              <p>{props.id}</p>
+            </motion.div>
+          </motion.div>
+          <motion.div>
+            <img className="mockup" src={img} alt="Mockup of the job"/>
+          </motion.div>
+          <motion.div className="buttonMore" animate={controls3}>
+            <motion.div
+              className="moreIcon"
+              whileHover={{
+                rotate: [0, 360],
+              }}
+              onClick={() => props.handleClick(props.id)}
+            ><Plus fill="red" stroke="green" /></motion.div>
+            <p className="more" onClick={() => props.handleClick(props.id)}> More</p>
           </motion.div>
         </motion.div>
-        {/* <div>
-          <img className="mockup" src={img} alt="Mockup of the job"/>
-        </div> */}
-        <motion.div animate={controls3}>
-          <p className="more" onClick={() => props.handleClick(props.id)}>+ More</p>
-        </motion.div>
-        </>
       }
       {
         props.idToKeep !== 0 && 
