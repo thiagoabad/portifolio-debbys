@@ -124,7 +124,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  background: url(./components/MainArea/CapaHappyDog.png) no-repeat center / cover;
+  background: no-repeat center / cover;
   justify-content: space-between;
 }
 

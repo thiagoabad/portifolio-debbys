@@ -5,7 +5,9 @@ const data = [
         "brand": "Happydog",
         "industry": "Events",
         "tasks": "Identity, Marketing",
-        "year": 2015
+        "year": 2015,
+        "mockup": "HappyDogMockup.png",
+        "background": "bghappydog.png"
     },
     {
         "id": 2,
@@ -13,7 +15,9 @@ const data = [
         "brand": "Dog Adventure",
         "industry": "Pet Services",
         "tasks": "Identity, Marketing",
-        "year": 2015
+        "year": 2015,
+        "mockup": "DogAdvMockup.png",
+        "background": "bgdogadventure.png"
     },
     {
         "id": 3,
@@ -21,7 +25,9 @@ const data = [
         "brand": "Homecakes",
         "industry": "Food",
         "tasks": "Identity, Marketing",
-        "year": 2016
+        "year": 2016,
+        "mockup": "HappyDogMockup.png",
+        "background": "bghappydog.png"
     },
     {
         "id": 4,
@@ -29,7 +35,9 @@ const data = [
         "brand": "PHY IT",
         "industry": "IT Services",
         "tasks": "Identity, Digital Marketing",
-        "year": 2017
+        "year": 2017,
+        "mockup": "DogAdvMockup.png",
+        "background": "bgdogadventure.png"
     }
 ]
 

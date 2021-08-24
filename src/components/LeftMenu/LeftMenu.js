@@ -1,8 +1,7 @@
 import './LeftMenu.css';
 import { motion, useAnimation } from "framer-motion"
-import React, {useLayoutEffect , useRef } from "react";
+import React, {useLayoutEffect, useRef,} from "react";
 import Details from '../Details/Details';
-import img from "./HappyDogMockup.png";
 import { ReactComponent as Plus } from './plus.svg';
 
 function LeftMenu(props) {
@@ -43,7 +42,10 @@ function LeftMenu(props) {
     <div className="detailsContentOpened">
       {
         props.idToKeep === 0 && 
-        <motion.div animate={controls2} className="floatScreen">
+        <motion.div 
+        animate={controls2} 
+        className="floatScreen" 
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL + props.data.background})`}}>
           <motion.div className="LeftMenu">
             <motion.div animate={controls}>
               <p id="title" className="leftMenuTitle">{props.data.type}</p>
@@ -55,7 +57,7 @@ function LeftMenu(props) {
             </motion.div>
           </motion.div>
           <motion.div>
-            <img className="mockup" src={img} alt="Mockup of the job"/>
+              <img className="mockup" src={process.env.PUBLIC_URL + props.data.mockup} alt="Mockup of the job"/>
           </motion.div>
           <motion.div className="buttonMore" animate={controls3}>
             <motion.div
@@ -64,7 +66,7 @@ function LeftMenu(props) {
                 rotate: [0, 360],
               }}
               onClick={() => props.handleClick(props.id)}
-            ><Plus fill="red" stroke="green" /></motion.div>
+            ><Plus/></motion.div>
             <p className="more" onClick={() => props.handleClick(props.id)}> More</p>
           </motion.div>
         </motion.div>
