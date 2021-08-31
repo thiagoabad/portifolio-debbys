@@ -128,6 +128,99 @@
   justify-content: space-between;
 }
 
+.menuButton{
+  position: absolute;
+  margin-left: 92vw;
+  margin-bottom: 90vh;
+}
+
+.menu{
+  display: flex;
+  height: 50px;
+  width: 50px;
+  background: black;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.menu--big {
+  /* animation: goBig 1s 1; */
+}
+
+.slash {
+  width: 35px;
+  height: 6px;
+  background-color: white;
+  animation-fill-mode: forwards !important;
+}
+
+.slash--1 {
+  animation: goL 1s 1;
+}
+.slash--2 {
+  animation: goV 1s 1;
+}
+.slash--3 {
+  animation: goR 1s 1;
+}
+.slash--1B {
+  transform: rotateZ(45deg);
+  animation: backL 1s 1;
+}
+.slash--2B {
+  background-color: rgba(0, 0, 0, 0);
+  animation: backV 1s 1;
+}
+.slash--3B {
+  margin-top: -55px;
+  transform: rotateZ(-45deg);
+  animation: backR 1s 1;
+}
+@keyframes goL {
+  100% {
+    transform: rotateZ(45deg);
+  }
+}
+@keyframes goV {
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+@keyframes goR {
+  100% {
+    margin-top: -55px;
+    transform: rotateZ(-45deg);
+  }
+}
+@keyframes backL {
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes backV {
+  100% {
+    background-color: white;
+  }
+}
+@keyframes backR {
+  100% {
+    margin-top: 0px;
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes goBig {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  } 
+  100% {
+    transform: scale(1);
+  }
+}
 /* @media only screen and (max-width: 768px){
   .MainRow{
       flex-direction: column;

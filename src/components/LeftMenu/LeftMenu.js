@@ -3,6 +3,7 @@ import { motion, useAnimation } from "framer-motion"
 import React, {useLayoutEffect, useRef,} from "react";
 import Details from '../Details/Details';
 import { ReactComponent as Plus } from './plus.svg';
+import MenuButton from '../MenuButton/MenuButton';
 
 function LeftMenu(props) {
   const controls = useAnimation();
@@ -68,6 +69,11 @@ function LeftMenu(props) {
               onClick={() => props.handleClick(props.id)}
             ><Plus/></motion.div>
             <p className="more" onClick={() => props.handleClick(props.id)}> More</p>
+          </motion.div>
+          <motion.div
+            className="menuButton"
+          >
+            <MenuButton/>
           </motion.div>
         </motion.div>
       }
