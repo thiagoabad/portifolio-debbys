@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
 
 * {
   -moz-user-select:none;
@@ -60,21 +61,24 @@
 }
 
 .LeftMenu p{
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Oswald';
   font-size: 3vw;
   margin-left: 12vw;
+  text-shadow: -2px 1px #ececec;
 }
 
 .LeftMenu h2{
-  font-family: 'Lobster', cursive;
+  font-family: 'Oswald';
   margin-left: 12vw;
   font-size: 3vw;
+  text-shadow: -2px 1px #ececec;
 }
 
 .LeftMenu h3{
-  font-family: 'Lobster', cursive;
+  font-family: 'Oswald';
   margin-left: 12vw;
   font-size: 3vw;
+  text-shadow: -2px 1px #ececec;
 }
 
 .MiniMenu{
@@ -84,14 +88,14 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  margin-left: 12vw;
-  margin-top: 82vh;
+  margin-left: 4vw;
+  margin-top: 86vh;
 }
 
 .circle{
   width: 10px;
   height: 10px;
-  background-color: rgb(60, 60, 60);
+  background-color: rgb(187, 187, 187);
   border-radius: 10px;
   margin: 5px;
 }
@@ -100,7 +104,7 @@
   width: 6px;
   height: 6px;
   background-color: rgb(255, 255, 255 / 0%);
-  border: rgb(60, 60, 60) solid 2px;
+  border: rgb(187, 187, 187) solid 2px;
   border-radius: 10px;
   margin: 5px;
 }
@@ -110,6 +114,33 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.detail-text-pt{
+  font-family: tahoma,geneva,sans-serif;
+  line-height: 1.4em;
+  font-size: 17px;
+  color: #696969;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+}
+
+.detail-text-en{
+  font-family: tahoma,geneva,sans-serif;
+  line-height: 1.4em;
+  font-size: 16px;
+  color: #a4a4a4;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.detailsText{
+  margin: 3em;
 }
 
 .detailsContent{

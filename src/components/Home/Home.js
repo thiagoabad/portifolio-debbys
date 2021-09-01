@@ -23,11 +23,12 @@ function Home() {
         {data.map(el => {
             if (idToKeep === 0 || idToKeep === el.id) {
                 return  <Element key={el.id} name={"row"+el.id} className="element" >
-                            <MainRow 
-                            id={el.id} 
+                            <MainRow
+                            key={el.id}
+                            id={el.id}
                             data={el}
-                            hideMiniMenu={() => hideMiniMenu()}
-                            hideAllOthers={(idToKeep) => hideAllOthers(idToKeep)}
+                            hideMiniMenu={hideMiniMenu}
+                            hideAllOthers={hideAllOthers}
                             idToKeep={idToKeep}
                             mainAreaVisibility={mainAreaVisibility}
                             />

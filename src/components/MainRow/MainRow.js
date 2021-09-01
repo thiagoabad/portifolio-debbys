@@ -11,21 +11,13 @@ function MainRow(props) {
     setActive(true);
   }
 
-  function hideAllOthers(){
-    props.hideAllOthers(props.id);
-  }
-
-  function hideMiniMenu(){
-    props.hideMiniMenu();
-  }
-
   return (
     <div className="MainRow">
       <LeftMenu 
         animate={active} 
-        hideMiniMenu={() => hideMiniMenu()}
-        hideAllOthers={() => hideAllOthers()}
-        handleClick={() => handleClick()} 
+        hideMiniMenu={props.hideMiniMenu}
+        hideAllOthers={props.hideAllOthers}
+        handleClick={handleClick} 
         id={props.id} 
         idToKeep={props.idToKeep}
         data={props.data}

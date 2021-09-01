@@ -1,6 +1,6 @@
 import './LeftMenu.css';
 import { motion, useAnimation } from "framer-motion"
-import React, {useLayoutEffect, useRef,} from "react";
+import React, {useLayoutEffect, useRef, useState} from "react";
 import Details from '../Details/Details';
 import { ReactComponent as Plus } from './plus.svg';
 import MenuButton from '../MenuButton/MenuButton';
@@ -10,6 +10,7 @@ function LeftMenu(props) {
   const controls2 = useAnimation();
   const controls3 = useAnimation();
   const firstUpdate = useRef(true);
+  const [idToKeep, setIdToKeep] = useState(0);
 
   useLayoutEffect(() => {
     if (firstUpdate.current) {
@@ -29,7 +30,7 @@ function LeftMenu(props) {
         y: props.animate ? '-100%' : 0,
         transition: { duration: 2 },
       }).then(() => {
-        props.hideAllOthers()
+        idToKeep === props.id && props.hideAllOthers(props.id)
       })
     })
   });
@@ -54,21 +55,25 @@ function LeftMenu(props) {
               <h3>{props.data.industry}</h3>
               <p>{props.data.tasks}</p>
               <p>{props.data.year}</p>
-              <p>{props.id}</p>
             </motion.div>
           </motion.div>
-          <motion.div>
-              <img className="mockup" src={process.env.PUBLIC_URL + props.data.mockup} alt="Mockup of the job"/>
-          </motion.div>
-          <motion.div className="buttonMore" animate={controls3}>
+          {
+            props.data.mockup && 
+            <motion.div>
+                <img className="mockup" src={process.env.PUBLIC_URL + props.data.mockup} alt="Mockup of the job"/>
+            </motion.div>
+          }
+          <motion.div className="buttonMore" animate={controls3} onClick={() => {
+              setIdToKeep(props.id);
+              props.handleClick();
+            }}>
             <motion.div
               className="moreIcon"
               whileHover={{
                 rotate: [0, 360],
               }}
-              onClick={() => props.handleClick(props.id)}
             ><Plus/></motion.div>
-            <p className="more" onClick={() => props.handleClick(props.id)}> More</p>
+            <p className="more"> More</p>
           </motion.div>
           <motion.div
             className="menuButton"

@@ -21,23 +21,23 @@ const data = [
     },
     {
         "id": 3,
-        "type": "Work",
-        "brand": "Homecakes",
-        "industry": "Food",
-        "tasks": "Identity, Marketing",
-        "year": 2016,
-        "mockup": "HappyDogMockup.png",
-        "background": "bghappydog.png"
+        "type": "Project",
+        "brand": "UEMG",
+        "industry": "Books",
+        "tasks": "Editorial",
+        "year": 2012,
+        "mockup": "",
+        "background": "revistabg.jpg"
     },
     {
         "id": 4,
         "type": "Event",
-        "brand": "PHY IT",
-        "industry": "IT Services",
-        "tasks": "Identity, Digital Marketing",
+        "brand": "Wedding",
+        "industry": "Events",
+        "tasks": "Creation",
         "year": 2017,
-        "mockup": "DogAdvMockup.png",
-        "background": "bgdogadventure.png"
+        "mockup": "",
+        "background": "weddingbg.jpg"
     }
 ]
 

@@ -27,12 +27,12 @@ function MenuButton() {
         >
             {Range(1, 4).map((el) =>  
                 initial ? 
-                <div id={"slash" + el} className="slash"></div>
+                <div key={"menu"+el} id={"slash" + el} className="slash"></div>
                 :
                 menuOpen ?
-                    <div id={"slash" + el} className={"slash slash--" + (el)}></div>
+                    <div key={"menu"+el} id={"slash" + el} className={"slash slash--" + (el)}></div>
                     :
-                    <div id={"slash" + el} className={"slash slash--" + (el) + "B"}></div>
+                    <div key={"menu"+el} id={"slash" + el} className={"slash slash--" + (el) + "B"}></div>
             )}
         </div>
     )
