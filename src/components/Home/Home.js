@@ -14,8 +14,15 @@ function Home() {
     }
   
     function hideAllOthers(idToKeep){
-      setIdToKeep(idToKeep);
-      setMainAreaVisibility(false);
+        console.log(idToKeep)
+        setIdToKeep(idToKeep);
+        if (idToKeep === 0) {
+            setMainAreaVisibility(true);
+            setMiniMenuVisibility(true);
+        } else {
+            setMainAreaVisibility(false);   
+        }
+        
     }
   
     return (<>

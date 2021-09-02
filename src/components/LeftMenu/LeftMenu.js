@@ -19,8 +19,8 @@ function LeftMenu(props) {
     }
     props.hideMiniMenu();
     controls3.start({
-      x: props.animate ? '150%' : 0,
-      transition: { duration: 1.4 },
+      x: props.animate ? '200%' : 0,
+      transition: { duration: 1 },
     })
     controls.start({
       x: props.animate ? '-100%' : 0,
@@ -75,22 +75,31 @@ function LeftMenu(props) {
             ><Plus/></motion.div>
             <p className="more"> More</p>
           </motion.div>
-          <motion.div
+          {/* <motion.div
             className="menuButton"
           >
             <MenuButton/>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       }
       {
         props.idToKeep !== 0 && 
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          variants={list}
-        >
-          <Details id={props.id}/>
-        </motion.div>
+        <>
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={list}
+          >
+            <Details id={props.id}/>
+          </motion.div>
+          <motion.div className="backButton" onClick={() => {
+              firstUpdate.current = true;
+              props.handleClick();
+              props.hideAllOthers(0);
+            }}>
+            <p className="back">BACK</p>
+          </motion.div>
+        </>
       }
     </div>
   );

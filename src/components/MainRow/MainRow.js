@@ -8,7 +8,7 @@ function MainRow(props) {
   const [active, setActive] = useState(false);
 
   function handleClick(){
-    setActive(true);
+    setActive(!active);
   }
 
   return (
